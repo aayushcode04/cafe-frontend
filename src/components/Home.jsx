@@ -65,12 +65,7 @@ const Home = () => {
       </section>
 
       <footer className={styles.footer} id="footer">
-        <div className={styles.socialLinks}>
-          <a href="#" className={styles.socialLink}><i className="fab fa-facebook-f"></i></a>
-          <a href="#" className={styles.socialLink}><i className="fab fa-instagram"></i></a>
-          <a href="#" className={styles.socialLink}><i className="fab fa-twitter"></i></a>
-          <a href="#" className={styles.socialLink}><i className="fab fa-pinterest"></i></a>
-        </div>
+        
         <p>123 Coffee Lane, Brew District, Mumbai 400001</p>
         <p>Open Daily: 7:00 AM - 9:00 PM</p>
         <p className={styles.copyright}>© 2023 Coffee & Cookie Café. All rights reserved.</p>
