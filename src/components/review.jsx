@@ -98,28 +98,34 @@ const Review = () => {
 
           <div className={styles.formGroup}>
             <label>Your Rating</label>
-            <div className={styles.starRating}>
-              {[...Array(5)].map((star, i) => {
+
+            <div className={styles.rating}>
+              {[...Array(5)].map((_, i) => {
                 const ratingValue = i + 1;
                 return (
-                  <label key={i}>
+                  <label key={ratingValue}>
                     <input
                       type="radio"
                       name="rating"
                       value={ratingValue}
-                      onClick={() => setNewReview(prev => ({ ...prev, rating: ratingValue }))}
+                      onClick={() => handleRatingClick(ratingValue)}
                     />
                     <FaStar
                       className={styles.star}
-                      color={ratingValue <= (newReview.hover || newReview.rating) ? "#ffc107" : "#e4e5e9"}
+                      color={
+                        ratingValue <= (newReview.hover || newReview.rating)
+                          ? "#ffc107"
+                          : "#e4e5e9"
+                      }
                       size={25}
-                      onMouseEnter={() => setNewReview(prev => ({ ...prev, hover: ratingValue }))}
-                      onMouseLeave={() => setNewReview(prev => ({ ...prev, hover: 0 }))}
+                      onMouseEnter={() => handleStarHover(ratingValue)}
+                      onMouseLeave={handleMouseLeave}
                     />
                   </label>
                 );
               })}
             </div>
+            
           </div>
 
           <div className={styles.formGroup}>
