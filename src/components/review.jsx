@@ -109,6 +109,7 @@ const Review = () => {
                       name="rating"
                       value={ratingValue}
                       onClick={() => handleRatingClick(ratingValue)}
+                      style={{ display: 'none' }} 
                     />
                     <FaStar
                       className={styles.star}

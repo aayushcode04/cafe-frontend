@@ -64,6 +64,16 @@
   transition: color 0.2s;
 }
 
+.rating {
+  display: flex;
+  gap: 5px;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
 .submitButton {
   background: #6e45e2;
   color: white;
