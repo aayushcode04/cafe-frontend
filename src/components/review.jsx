@@ -63,7 +63,8 @@ const Review = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/reviews', review);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/reviews`, review);
+
       setReviews([res.data, ...reviews]);
       setNewReview({ name: '', rating: 0, comment: '', hover: 0 }); // Clear form
     } catch (error) {
