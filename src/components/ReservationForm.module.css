@@ -1,0 +1,191 @@
+:root {
+  --primary: #5D4037;    /* Darker coffee brown */
+  --secondary: #D7CCC8;  /* Light beige */
+  --accent: #795548;     /* Rich brown */
+  --text: #3E2723;       /* Dark brown */
+  --light: #EFEBE9;      /* Cream */
+  --highlight: #FFAB40;  /* Amber accent */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.formBox {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 5px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+
+.formBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--highlight));
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-bottom: 20px;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.homeLink {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: rgba(93, 64, 55, 0.1);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.homeLink:hover {
+  background: rgba(93, 64, 55, 0.2);
+  transform: translateY(-2px);
+}
+
+.title {
+  color: var(--primary);
+  margin: 20px 0;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.form {
+  width: 100%;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.inputField {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: white;
+  border: 2px solid rgba(93, 64, 55, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 3px rgba(255, 171, 64, 0.2);
+}
+
+.inputField::placeholder {
+  color: #A8A8A8;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+}
+
+.submitBtn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0.1), 
+    rgba(255,255,255,0.3), 
+    rgba(255,255,255,0.1));
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(93, 64, 55, 0.4);
+}
+
+.submitBtn:hover::after {
+  transform: translateX(100%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .formBox {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+  
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .inputField {
+    padding: 14px 16px;
+  }
+}

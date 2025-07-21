@@ -1,0 +1,376 @@
+.container {
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoContainer {
+  position: relative;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #f5b850;
+  object-fit: cover;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.logo:hover {
+  transform: rotate(15deg);
+}
+
+.logoContainer::after {
+  content: "☕";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.logoContainer:hover::after {
+  opacity: 1;
+  top: -30px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #6F4E37;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.navLink:hover {
+  color: #f5b850;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f5b850;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.searchContainer {
+  position: relative;
+  width: 300px;
+}
+
+.search {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.search:focus {
+  outline: none;
+  border-color: #f5b850;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.searchButton {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+}
+
+.searchButton:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+
+.hero {
+  text-align: center;
+  padding: 6rem 0;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), 
+              url('https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg') center/cover no-repeat;
+  color: white;
+  width: 100%;
+}
+
+.slogan {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 auto 1rem;
+  font-style: italic;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.slogan strong {
+  font-weight: 700;
+  color: #f5b850;
+}
+
+.menuSection {
+  padding: 2rem 0;
+  background: #F5F5DC;
+  width: 100%;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #6F4E37;
+  margin: 0 auto 2rem;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menuItem {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menuImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menuDetails {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.itemName {
+  font-size: 1.3rem;
+  margin: 0 0 0.8rem;
+  color: #6F4E37;
+}
+
+.itemPrice {
+  font-size: 1.3rem;
+  color: #f5b850;
+  font-weight: 700;
+  margin: 0;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer {
+  background: #3E2723;
+  color: white;
+  padding: 3rem 5%;
+  text-align: center;
+  width: 100%;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.socialLink {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.socialLink:hover {
+  color: #f5b850;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .navLinks {
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .searchContainer {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .slogan {
+    font-size: 2rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    gap: 1rem;
+  }
+  
+  .slogan {
+    font-size: 1.7rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Enhanced Button Styles */
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #6F4E37, #4B3621);
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.btnPrimary:hover {
+  background: linear-gradient(135deg, #4B3621, #3E2723);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btnSecondary {
+  background: linear-gradient(135deg, #E74C3C, #C0392B);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.85rem;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.btnSecondary:hover {
+  background: linear-gradient(135deg, #C0392B, #A93226);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add this for the "Add to Order" button specifically */
+.orderBtn {
+  position: relative;
+  z-index: 1;
+}
+
+.orderBtn::after {
+  content: '+';
+  margin-left: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.orderBtn:hover::after {
+  transform: rotate(90deg);
+  margin-left: 0.8rem;
+}

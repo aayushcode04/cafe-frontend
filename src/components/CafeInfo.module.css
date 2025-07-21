@@ -1,0 +1,129 @@
+.container {
+  background: linear-gradient(135deg, #b59076, #ddc1a1);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 30px;
+  padding: 10px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.homeLink {
+  color: #7d2a2a;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.homeLink:hover {
+  color: #ff0000f0;
+  text-shadow: 0 0 8px rgba(125, 42, 42, 0.3);
+  transform: translateY(-2px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-color: #7d2a2a;
+  margin: 30px 0 20px;
+  text-align: center;
+}
+
+.paragraph {
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  width: 80%;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: #3e2723;
+}
+
+.highlight {
+  padding: 25px;
+  font-size: 1.8rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(135deg, #e3ad62, #e2a45b, #c08555);
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  text-align: center;
+}
+
+.image {
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.imageSmall {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .highlight {
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  .image {
+    width: 95%;
+  }
+
+  .imageSmall {
+    width: 80%;
+  }
+}
