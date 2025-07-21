@@ -21,7 +21,7 @@ const Review = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/reviews');
+        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/reviews`);
         setReviews(res.data);
         
       } catch (error) {
